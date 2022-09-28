@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kyler's Hobby</title>
+</head>
+<body>
+
+<h1>Kyler's Hobby: 3D Printing</h1></br>
+
+<h2>Introduction</h2>
+<p>
+  3D printing is the process of creating a physical object from a 3D model using an additive process.
+  3D printing has applications in rapid prototyping, the hobby space, and the production of final products.
+
+  There are various materials and methods for 3D printing, each with its uses, advantages, and disadvantages.
+
+  The two most common consumer 3D printing technologies are FDM 3D printing and SLA printing.
+  Kyler uses both types of 3D printing for rapid prototyping for school projects and hobby use.
+</p> </br>
+
+<h2>FDM Printing</h2>
+<h3>What Is FDM Printing?</h3>
+<p>
+  Fused Deposition Modeling (FDM) is a method of additive manufacturing where the material is extruded through a nozzle and
+  fused with previously placed material. In a 3D printer, a filament passes through a heated extruder that deposits the material
+  as the extruder moves.
+
+<br><img src="images/3DPrinting/fdm_extruder.png" alt="FDM Extruder" width="400" > <br>
+Common FDM Extruder (Credits: Quickast Makers Space)
+</p></br>
+
+<h3>Materials</h3>
+<p>
+    FDM 3D printers use materials ranging from plastics to metal and foods such as chocolate.
+    The most common consumer materials are plastics.
+</p>
+
+<h4>Commoningly Used Materials</h4>
+<ul>
+  <li>PLA</dt>
+  <dd>Polylactic Acid, PLA, is the most popular filament choice. The material is made from corn starches and is the easiest to print and use.
+      It is not the strongest material and can deform at warm temperatures.
+      It is a good material for scale models and hobby prints.
+  </dd>
+
+  <li>ABS</dt>
+  <dd> Acrylonitrile butadiene styrene, ABS, is a thermoplastic that is impact and heat-resistant.
+    ABS can be difficult to print because ABS is prone to warping when the environment changes. ABS also releases fumes
+      which can be problematic for individuals sensitive to them.
+  </dd>
+  <li>PETG</dt>
+  <dd>Polyethylene Terephthalate glycol-modified (PETG) filament is a durable food-safe material.
+    The biggest hurdle with PETG is getting access to a printer that can warm up to the temperatures
+    required to melt it.
+  </dd>
+  <li>TPU</dt>
+  <dd>Thermoplastic Polyurethane (TPU) is a flexible and chemical resistant material that can withstand deformations. TPU can be difficult to use because it absorbs moisture from the air more than other materials, resulting in failed prints with more physical defects.
+      To avoid this, TPU needs to be stored in a container with little moisture or must be dehydrated on occasion.
+  </dd>
+</ul>
+
+</br>
+
+<h3>Machines</h3>
+<p>
+    3D printers come in all shapes and sizes and can have features designed to simplify the process of printing. Some higher-end printers use higher quality materials to reduce the odds of failure and the frequency of maintenance. Overall, printers with a lower cost may perform similarly to more expensive printers
+  but may not be as beginner-friendly due to increased maintenance.
+  </p><br>
+
+    <table>
+  <tr>
+    <td><img src="images/3DPrinting/Ender3.png" alt="Ender 3" width = "300" ></td>
+    <td><img src="images/3DPrinting/Prusai3.png" alt="Prusa i3" width = "300" ></td>
+    <td><img src="images/3DPrinting/Chiron.png" alt="Anycubic Chiron" width = "300" ></td>
+    <td><img src="images/3DPrinting/UltimakerS5.png" alt="Ultimaker S5" width = "300" ></td>
+  </tr>
+</table>
+
+</br>
+
+<h3>Safety</h3>
+<p>
+  FDM 3D printing is generally safe, but accidents can occur.
+  One of the more common accidents is burns from the nozzle.
+  The nozzle of the 3D printer will reach temperatures of at least 180-200 C (356 - 392F).
+  In addition to burns, fires could occur if thermal regulation fails or the printer fails,
+  but this is unlikely when taking proper care. Finally, certain materials can produce negative side effects, so it is best to research materials before printing.
+  </p></br>
+
+<h3>Creating A Print</h3>
+<p>Before you use the printer, you need to take a 3D model and convert it into path instructions the printer can read.
+  The instructions are the GCODE, and the program that creates this file is called a slicer.</p><br>
+
+<h4>Slicer</h4>
+<p>Slicers are programs that will take a 3D model and generate the paths necessary for the printer to travel to create the model.
+  Some slicers are proprietary to the printer, and some support many printers.
+  One popular slicer is Cura which supports many printers and is beginner-friendly with the ability to be fined tuned by experienced users.
+</p>
+
+<h5>Importing The Model</h5>
+<p>When you import a model into Cura, it can be resized, rotated, and moved to accommodate multiple models.
+  The model should be flat against the print bed, or a majority of it should.
+</p>
+
+<img src="images/3DPrinting/Cura.png" alt="Cura" width = "300" >
+
+<h5>Common Settings</h5>
+<p>Slicers come with settings that will determine the quality of the print, configure settings for the material used, and the support structure.</p>
+<ul>
+  <li>Hot End Temperature</dt>
+  <dd>The hot end temperature is the temperature for the hot end or nozzle.
+The hot end temperature varies on the material. For example, the hot end temp for PLA is 180-200C.</dd>
+
+  <li>Bed Temperature</dt>
+  <dd>The bed temperature is the temperature of the heated print bed.
+    This varies on the material. For example, PLA is 50-60C.
+  </dd>
+  <li>Layer Height</dt>
+  <dd>The layer height determines how tall a layer is in the model. Generally, lower layer height increases the quality but increases print time.
+     Depending on the size of the model, different layer heights are necessary.
+  </dd>
+  <li>Infill</dt>
+  <dd>Infill is a measure of how 'solid' the material is. A higher infill means the model will require more filament to print.
+     Common infill percentages are 20%, but the infill should be altered depending on the type of object made.
+  </dd>
+  <li>Supports</dt>
+  <dd>Supports are necessary when  parts of the model hang off the model without material underneath. Generally, you want to turn on supports to prevent print failures. Slicers occasionally add unecessary supports, but the slicer can modified to remove these.
+      There are two types of supports, normal (rectangular) and tree. Tree supports wrap around the model to provide support, and rectangular supports are more like
+      pillars of material. One support may work better for some models. Organic models often work better with tree supports on average, but it is highly dependent on the exact model.
+  </dd>
+  <li>...and more.</dt>
+  <dd> Many other settings fine-tune your prints, but these are the basics.
+  </dd>
+</ul>
+<img src="images/3DPrinting/PrintSettings.png" alt="Settings" width = "300" height= "300" ></br></br>
+
+<p>Rectangular vs Tree Support</p>
+<table>
+  <tr>
+    <td><img src="images/3DPrinting/Support.png" alt="Normal Support" width = "300" height= "300" ></td>
+    <td><img src="images/3DPrinting/TreeSupport.png" alt="Tree Support" width = "300" height= "300"></td>
+  </tr>
+</table>
+
+<h5>Slicing The Model</h5>
+<p>Once the model is imported and the settings configured, the model is ready for slicing. Click on the slice button, and the slicer will analyze the model to generate
+    the paths for the printer.
+</p>
+
+<img src="images/3DPrinting/Preview.png" alt="Print Preview" width = "300" height= "300" >
+</br>
+
+<h4>Printing The Model</h4>
+<p>The steps to print the model varies from printer to printer, but in general, insert the storage medium into the printer, and pre-heat the printer.
+Once the printer is pre-heated, go to the menu to start the print and wait for your model.
+</p></br>
+
+Images:
+<table>
+  <tr>
+    <td><img src="images/3DPrinting/Printer.jpg" alt="Printer" width = "300" height= "300" ></td>
+    <td><img src="images/3DPrinting/PrintStart.jpg" alt="Print Start" width = "500" height= "300"></td>
+    <!---<td><img src="images/3DPrinting/Result.jpg" alt="Print Result" width = "300" height= "300"></td>-->
+  </tr>
+</table>
+</br>
+
+
+<!-- Left off-->
+
+<h2>Resin (SLA) Printing</h2>
+<h3>What Is SLA Printing?</h3>
+<p></p></br>
+
+<h3>Materials</h3>
+<p></p></br>
+
+<h3>Machines</h3>
+<p></p></br>
+
+<h3>Safety</h3>
+<p></p></br>
+
+<h3>Creating A Print</h3>
+<p></p></br>
+
+<h2>Gallery</h2>
+<p>Below is an image of a 3D print Kyler has worked on. Click the image to see a randomly selected image.</p>
+<img src="images/Samples/CLA_Lithophane.jpg" onclick="newPicture()" alt="Gallery Image" id = "Gallery" height = "300"  ></td>
+
+
+<script>
+    const images = ["Batmobile.png", "ChibiNaoto.jpg", "CLA_Lithophane.jpg", "Deadpool.jpg",
+    "Gasmask.jpg", "Headcrab.jpg", "IronmanLithophane.jpg","LauraLithophane.jpg","MandoLithophane.jpg",
+    "MitsuruLithophane.jpg", "Psylocke.jpg", "SophiaYoYo.jpg", "TaigaLithophane.jpg", "Drawer.jpg",
+    "MarbleDarthRevan.jpg", "QueenMask.jpg", "Speaker.jpg", "SpiderManLastStand.jpg", "Tank.jpg"];
+
+    var i = Math.floor(Math.random()*images.length);
+    var img = images[i];
+    document.getElementById("Gallery").src="images/Samples/" + img;
+    
+    function newPicture() {
+
+
+
+      var img = images[i];
+      document.getElementById("Gallery").src="images/Samples/" + img;
+
+      i++;
+      if (i == images.length)
+        i =0;
+
+    }
+</script>
+</body>
+</html>
