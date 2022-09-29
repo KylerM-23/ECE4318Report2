@@ -31,6 +31,19 @@ a.navlink {
   text-decoration: none;
 }
 
+.button {
+  border: none;
+  color: blue;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
 </style>
 
 <body id = "Site">
@@ -231,7 +244,20 @@ different methods for cleaning, more on that in the cleanup section.
 </p></br>
 
 <h3>Machines</h3>
-<p></p></br>
+<p>When choosing a printer, the primary differences will be in the size of the printer and the screen. Some printers have a larger volume compared
+  to others with a larger build area and height contributing to a larger volume. The other difference is in the LCD screen, more expensive printers have
+high resolution screens which allow for higher detail prints and some screens allow for faster printing. Depending on your budget and expected print size,
+some sizes will be more appropriate for your project.</p>
+
+<table>
+<tr>
+<td><img src="images/3DPrinting/Mars3.png" alt="Elegoo Mars 3" width = "300" ></td>
+<td><img src="images/3DPrinting/HalotOnePlus.png" alt="Creality Halot One Plus" width = "300" ></td>
+<td><img src="images/3DPrinting/SaturnS.png" alt="Elegoo Saturn S" width = "300" ></td>
+<td><img src="images/3DPrinting/AnyCubicPhoton.png" alt="ANYCUBIC Photon M3 Max" width = "300" ></td>
+</tr>
+</table>
+
 
 <h3>Safety</h3>
 <p></p></br>
@@ -252,8 +278,12 @@ different methods for cleaning, more on that in the cleanup section.
 <p></p></br>
 
 <h2>Gallery</h2>
-<p>Below is an image of a 3D print Kyler has worked on. Click the image to see a randomly selected image.</p>
-<img src="images/Samples/CLA_Lithophane.jpg" onclick="newPicture()" alt="Gallery Image" id = "Gallery" height = "300"  ></td>
+<p>Below is an image of a 3D print Kyler has worked on. Click the buttons below to cycle through the images.</p>
+<table>
+<tr>
+<td><button type="button" onclick="backPicture()">Previous Picture</button></td>
+<td><button type="button" onclick="nextPicture()">Next Picture</button></td> </tr> </table>
+<img src="images/Samples/CLA_Lithophane.jpg" alt="Gallery Image" id = "Gallery" height = "300"  ></td>
 
 
 <script>
@@ -268,14 +298,26 @@ different methods for cleaning, more on that in the cleanup section.
     var img = images[i];
     document.getElementById("Gallery").src="images/Samples/" + img;
 
-    function newPicture() {
+    function nextPicture() {
 
+      i++;
+
+      if (i >= images.length)
+        i =0;
       var img = images[i];
       document.getElementById("Gallery").src="images/Samples/" + img;
 
-      i++;
-      if (i == images.length)
-        i =0;
+
+
+    }
+
+    function backPicture() {
+
+      i--;
+      if (i < 0)
+        i = images.length-1;
+      var img = images[i];
+      document.getElementById("Gallery").src="images/Samples/" + img;
 
     }
 
