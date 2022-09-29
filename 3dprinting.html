@@ -214,27 +214,27 @@ Images:
 </br>
 
 
-<!-- Left off-->
+
 
 <h2>Resin (LCD) Printing</h2>
 <h3>What Is LCD Printing?</h3>
 <p>
-Liquid Crystal Display (LCD) printing uses an LCD screen as a light source to cure resin. The part is printed one layer at a time
-and an LCD screen will illuminate the pixels that need to be cured for that layer. <br>
-
-The object is printed onto the inverted build plate (platform) which allows new material to be added onto the top and helps excess resin drip off.
-The vat is a container that stores the resin. <br><br>
+  Liquid Crystal Display (LCD) printing uses an LCD screen as a light source to cure the resin. The part is printed one layer at a time
+  and an LCD screen will illuminate to cure the pixels for that layer.</p> <br>
+<p>
+  The build plate allows the layers of the print to build on each other. The inverted build plate allows new material to be added onto the top and helps excess resin drip off.
+  The vat is a container that stores the resin. <br><br>
 
 <img src="images/3DPrinting/LCDPrinting.png" alt="LCDPrinter" width = "300" height= "300" > <br>
-Common LCD Printer Process (Credits: Quickast Makers Space) <br><br>
+Common LCD Printer Process (Credits: Phrozen 3D) <br><br>
 
-Resin printing is intended for high detail 3D prints and often used for printing miniature figurines for board games such as Warhammer.
-Resin printers are also used for prototyping collectible figurines before they are mass manufactuered, or will be sent as is.
+Resin printing performs the best with high-detail 3D prints, such as miniature figurines for board games such as Warhammer.
+Resin printers are also used for prototyping collectible figurines before they are mass manufactured or sent as is.
 
-
-There are other methods for 3D printing using resin, but LCD printing will be the primary focus for this webpage
+There are other methods for 3D printing using resin, but LCD printing will be the primary focus of this webpage.
 </p></br>
 
+<!-- Left off-->
 <h3>Materials</h3>
 <p>The primary material for LCD resin printers is photopolymer resin which will cure when exposed to ultraviolet light.
 Resin is the standard for the printers, but there are different types of resins avaliable for purchase.
@@ -260,13 +260,95 @@ some sizes will be more appropriate for your project.</p>
 
 
 <h3>Safety</h3>
-<p></p></br>
+<p>3D printing with resin is far more dangerous than with PLA and many more safety measures are necessary.
+Resin is an allergen which means prolonged exposure will result in irritation and allergic reactions when in contact with resin.
+If you come into contact with resin, likely resin will get onto your hands or fumes given off by the resin is inhaled.
+Resin provides a foul odor but becomes undetectable after exposure.</p>
+</br>
+<p>To protect yourself against resin, PPE should be used alongside other safety measures.
+Common saftey materials include Nitrile disposable gloves, safety glasses/goggles, and a respirator.
+If resin gets into contact with the skin, wash the affected area with soap and water and it is best to print in a well-ventilated room to reduce exposure to resin fumes.
+</p>
+</br>
+<table>
+<tr>
+<td><img src="images/3DPrinting/Gloves.png" alt="Gloves" width = "300" ></td>
+<td><img src="images/3DPrinting/Mask.png" alt="Respirator" width = "300" ></td>
+<td><img src="images/3DPrinting/Goggles.png" alt="Goggles" width = "300" ></td>
+</tr>
+</table>
 
 <h3>Creating A Print</h3>
-<p></p></br>
+<p>The process for creating a resin 3D print is similiar in the steps but there are more steps in the cleanup of the print and in the execution of some steps.</p></br>
 
-<h3>Cleanup</h3>
-<p></p></br>
+<h4>Slicer</h4>
+<p>There are a few different slicer programs, but the one we will be looking at is Chitubox which supports many different LCD printers.
+</p>
+
+<h5>Importing The Model</h5>
+<p>When you import a model into Chitubox, it can be resized, rotated, and moved to accommodate multiple models.
+  The print should be oriented to reduce the number of supports on delicate or important features (more on this in the supports section).
+  If possible, increase the area of the model in each layer which will help reduce print time since the time of the print is dependent on the layers of the final print.
+</p>
+
+<img src="images/3DPrinting/Chitubox.png" alt="Chitubox" width = "300" >
+
+<h5>Printer Settings</h5>
+<p></p>
+
+<h5>Supports</h5>
+<p>Resin supports require more work compared to FDM printing because they often require the user to place.
+  There is no all size fits all approach to addings supports automatically because differnt sized supports are necessary for different features of the print.
+The problem with auto-supports is they are all the same size and auto-supports can miss locations that require support, producing islands or weak area that can break during printing.</p>
+
+<img src="images/3DPrinting/Island.png" alt="Island" width = "300" >
+
+<br> <p>There are three types of supports which can be tailored to a specifc print. Here is a general overview of them.</p>
+<ul>
+  <li>Light Supports</dt>
+  <dd>Light supports are often used on delicate portions of a model that can break easily because they produce the least damage when they are removed.
+    Smaller models can be supported entirly with light supports, but as the size of the model increases, so does the liklihood of the model breaking.
+    Best practices include using the light supports to support delicate portions while other supports help with supporting the overall model. </dd>
+
+  <li>Medium Supports</dt>
+  <dd>The bed temperature is the temperature of the heated print bed.
+    This varies on the material. For example, PLA is 50-60C.
+  </dd>
+  <li>Heavy Supports</dt>
+  <dd>The layer height determines how tall a layer is in the model. Generally, lower layer height increases the quality but increases print time.
+     Depending on the size of the model, different layer heights are necessary.
+  </dd>
+</ul>
+
+<p>In practice, auto-supports are good to prepare the majority of the print, and then the user can add, edit, and remove any necessary supports.
+The support process can take some time especially for beginners as it is trial and error until users become comfortable adding supports and have
+enough experince to identify areas the print will likely fail. Once the model has been fully supported, it is time to print.</p>
+
+<h5>Slicing The Model</h5>
+<p>Once the model is imported and the settings configured, the model is ready for slicing. Click on the slice button, and the slicer will analyze the model to generate
+    the paths for the printer.
+</p>
+
+<img src="images/3DPrinting/ResinPreview.png" alt="Print Preview" width = "300" height= "300" >
+</br>
+
+<h4>Printing The Model</h4>
+<p>The steps to print the model begin with loading the sliced model on a USB drive and inserting it into the printer. Next, the printer is turned on and the vat is filled with resin.
+  Always check to make sure the build plate is securred and then you can begin the print and wait. Don't forget your PPE.
+</p></br>
+
+Images:
+<table>
+  <tr>
+    <td><img src="images/3DPrinting/Printer.jpg" alt="Printer" width = "300" height= "300" ></td>
+    <td><img src="images/3DPrinting/PrintStart.jpg" alt="Print Start" width = "500" height= "300"></td>
+    <!---<td><img src="images/3DPrinting/Result.jpg" alt="Print Result" width = "300" height= "300"></td>-->
+  </tr>
+</table>
+</br>
+
+<h4>Cleanup</h4>
+<p>When the print is completed, </p></br>
 
 <h2>Post Processing</h2>
 <p></p></br>
@@ -278,12 +360,12 @@ some sizes will be more appropriate for your project.</p>
 <p></p></br>
 
 <h2>Gallery</h2>
-<p>Below is an image of a 3D print Kyler has worked on. Click the buttons below to cycle through the images.</p>
-<table>
-<tr>
-<td><button type="button" onclick="backPicture()">Previous Picture</button></td>
-<td><button type="button" onclick="nextPicture()">Next Picture</button></td> </tr> </table>
-<img src="images/Samples/CLA_Lithophane.jpg" alt="Gallery Image" id = "Gallery" height = "300"  ></td>
+  <p>Below is an image of a 3D print Kyler has worked on. Click the buttons below to cycle through the images.</p>
+  <table>
+  <tr>
+  <td><button type="button" onclick="changePicture(false)">Previous Picture</button></td>
+  <td><button type="button" onclick="changePicture(true)">Next Picture</button></td> </tr> </table>
+  <img src="images/Samples/CLA_Lithophane.jpg" alt="Gallery Image" id = "Gallery" height = "300"  ></td>
 
 
 <script>
@@ -298,31 +380,24 @@ some sizes will be more appropriate for your project.</p>
     var img = images[i];
     document.getElementById("Gallery").src="images/Samples/" + img;
 
-    function nextPicture() {
-
-      i++;
+    function changePicture(direction) {
+      if (direction == true)
+        i++;
+      else
+        i--;
 
       if (i >= images.length)
-        i =0;
-      var img = images[i];
-      document.getElementById("Gallery").src="images/Samples/" + img;
-
-
-
-    }
-
-    function backPicture() {
-
-      i--;
-      if (i < 0)
+        i = 0;
+      else if (i < 0)
         i = images.length-1;
+
       var img = images[i];
       document.getElementById("Gallery").src="images/Samples/" + img;
-
     }
 
     function modeToggle()
     {
+
       if (mode)
         {
           document.getElementById("Site").style.color = "#000000";
@@ -345,6 +420,8 @@ some sizes will be more appropriate for your project.</p>
 
             mode = true;
           }
+
+
     }
 </script>
 </body>
