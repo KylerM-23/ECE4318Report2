@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Info</title>
+    <title>Lyndon's Bizarre Dreams</title>
     <link rel="stylesheet" href="info_web.css">
 
 </head>
 <body class="body">
     
     <div class="side">
+        <p>Link to Kyler's Hobby:</p>
+        <div class="content-link">
+            <a href="3dprinting.html">3d Printing</a>  
+        </div>
+        <p>Quick Navigation of This Webpage:</p>
         <div class="content-link">
             <a href="#sleep">Sleep</a>  
         </div>
@@ -35,6 +40,24 @@
         </div>
         <div class="content-link">
             <a href="#ASM">ASM</a>
+        </div>
+        <div class="content-link">
+            <a href="#zombie">Zombie</a>
+        </div>
+        <div class="content-link">
+            <a href="#scooter">Scooter</a>
+        </div>
+        <div class="content-link">
+            <a href="#samurai">Samurai</a>
+        </div>
+        <div class="content-link">
+            <a href="#security-pov">Security POV</a>
+        </div>
+        <div class="content-link">
+            <a href="#AI-Apocalypse">AI Apocalypse</a>
+        </div>
+        <div class="content-link">
+            <a href="#dinosaur-pokemon">Dinosaur Pokemon</a>
         </div>
     </div>
 
@@ -84,7 +107,7 @@
 
             <div id="CVS-parking-lot" class="div">
                 <p class="caption">Long before Lyndon got his driver's license, he had a dream where he magically spawned in
-                                   the parking lot in front of CVS with a car. The situation called for me to leave. Of course,
+                                   the parking lot in front of CVS with a car. The situation called for him to leave. Of course,
                                    he was not able to leave the CVS parking lot.
                 </p>
                 <img class="img-hobby" src="images/lyndon_CVS.png" alt="Image of CVS">
@@ -96,7 +119,7 @@
                                    colleges. Strangely, the dream happened around September and October, which was before he
                                    even applied to any UCs or Cal States. College application normally ends in November. 
                 </p>
-                <img class="img-hobby" src="images/lyndon_reject.png" alt="Image of ">
+                <img class="img-hobby" src="images/lyndon_reject.png" alt="Image of Lyndon Being Rejected">
             </div>
             <hr />
 
@@ -108,10 +131,82 @@
                 <img class="img-hobby" src="images/lyndon_ASM.png" alt="Image of ASM">
             </div>
             <hr />
+
+            <div id="zombie" class="div">
+                <p class="caption">Lyndon once had a boring dream where he woke up as a zombie. It was boring because being a zombie
+                                   didn't entitle anything. Lyndon ended up just going to school as if he was a regular human. The only
+                                   difference was that now he self-identified as a zombie.
+                </p>
+                <img class="img-hobby" src="images/lyndon_zombie.png" alt="Image of Zombie">
+            </div>
+            <hr />
+
+            <div id="scooter" class="div">
+                <p class="caption">Lyndon once had a peaceful dream of him riding a scooter down a hill. Suddenly however, there was a
+                                   shift in the tectonic plates, and a ramp was formed. Lyndon couldn't stop in time and took the ramp.
+                                   He tripped and scrapped his knee.
+                </p>
+                <img class="img-hobby-anime" id="scooter-tripping">
+            </div>
+            <hr />
+
+            <div id="samurai" class="div">
+                <p class="caption">Lyndon once had a dream where he was part of a samurai super team and fought off demons by cutting
+                                   them down. After a while, the demons were overwhelming Lyndon and his samurai friends, and they were
+                                   forced to run away. As he was running, Lyndon was running out of breath. To save face and look cool,
+                                   he stopped running, turned around, and told his samurai friends he will hold the demons back while they
+                                   escaped. Obivously, Lyndon died and the dream ended.
+                </p>
+                <img class="img-hobby" src="images/lyndon_samurai.png" alt="Image of Lyndon Saving Face">
+            </div>
+            <hr />
+
+            <div id="security-pov" class="div">
+                <p class="caption">When Lyndon was young, he was scaried of those Chinese dancing lions. And so, he one day had a nightmare
+                                   about them. What makes it more scary was the fact that for some reason his eyes saw things through the 
+                                   leds of a security camera.
+                </p>
+                <img class="img-hobby" src="images/lyndon_POV.png" alt="Image of Security POV">
+            </div>
+            <hr />
+
+            <div id="AI-Apocalypse" class="div">
+                <p class="caption">In the future, AI went terminator and seek to wipe out humanity. In the dream, Lyndon spent his time trying
+                                   to fight off the AIs and survive. He crawled around tunnels and conducted guerrilla warfare to protect humanity.
+                </p>
+                <img class="img-hobby" src="images/lyndon_AI.png" alt="Image of Lyndon Hiding from AI">
+            </div>
+            <hr />
+
+            <div id="dinosaur-pokemon" class="div">
+                <p class="caption">Lyndon one day woke up and find the world to resemble the kid-game Pokemon. Instead of there being "pokemons"
+                                   however, there were dinosaurs. Lyndon's "pikachu" was a giant stegosaurus. Unfortunately, the dream ended
+                                   before Lyndon got to do a pokemon battle.
+                </p>
+                <img class="img-hobby" src="images/lyndon_pokemon.png" alt="Image of Trainer Lyndon">
+            </div>
+            <hr />
         </div>
+
+        <script>
+            let images = ['images/lyndon_scooter0.png', 
+                          'images/lyndon_scooter1.png',
+                          'images/lyndon_scooter2.png', 
+                          'images/lyndon_scooter3.png'];
+            let index = 0;
+            const imgElement = document.querySelector('#scooter-tripping');
+    
+            function changeImage() {
+                imgElement.src = images[index];
+                index == images.length-1 ? index = 0 : index++;
+            }
+    
+            window.onload = function () {
+                setInterval(changeImage, 2000);
+            };
+        </script>
     </main>
 
-    
-
 </body>
+
 </html>
