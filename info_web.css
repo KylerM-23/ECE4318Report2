@@ -3,7 +3,7 @@
     grid-template-columns: 1fr;
     justify-content: left;
     background-color: aqua;
-    padding-bottom: 1000px;
+    padding-bottom: 500px;
 }
 
 .main {
@@ -36,8 +36,14 @@
     max-width: 500px;
     height: auto;
     object-fit: contain;
-    
 }
+
 .caption {
     font-weight: normal;
+}
+
+.img-hobby-anime {
+    width: 1000px;
+    height: 500px;
+    object-fit: cover;
 }
