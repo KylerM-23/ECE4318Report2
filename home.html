@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Group 2 Report 2</title>
+</head>
+
+<style>
+  body {background-color: #18191A;
+    color: white;
+  padding: 25px;
+  font-size: 25px;}
+
+
+   ul.nav{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+  }
+
+  li.nav {
+    display: inline;
+    float: left;
+  }
+
+  a.navlink {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+</style>
+
+<body id = "Site">
+  <ul class = "nav">
+    <li class = "nav"><a class = "navlink" href="info_web.html">Lyndon's Bizarre Dreams</a></li>
+    <li class = "nav"><a class = "navlink" href="3dprinting.html">Kyler's Hobby 3D Printing</a></li>
+    <li class = "nav"><a class = "navlink"  onclick="modeToggle()">Dark Mode Toggle</a></li>
+  </ul>
+
+<h1>Welcome To Our Website</h1></br>
+
+<h2>Introduction</h2>
+<p>
+  Welcome to group 2's webpage for ECE4318 report 2. This webpage serves as your central hub to
+  access the websites we created. Here you can find the webpages for Lyndon's Bizarre Dreams and
+  Kyler's Hobby 3D Printing.
+</p> </br>
+
+<h2>Lyndon's Bizarre Dreams</h2>
+<p>
+  Do you have the mental fortitude to travel through the land of the bizarre; a land where there is no logic and anything can and will happen.
+  If so, venture forth and enjoy your time in the bizarre world of Lyndon's subconscious.
+</p></br>
+
+
+<h2>Kyler's Hobby 3D Printing</h2>
+<p>
+  Are you intrested in 3D printing or wonder what Kyler likes to do in his free time?
+  Well do we have the webpage for you, visit this webpage to learn more about FDM and LCD
+  printing and see some of the things Kyler has made.
+</p></br>
+
+<script>
+    var mode = true;
+    function modeToggle()
+    {
+      if (mode)
+        {
+          document.getElementById("Site").style.color = "#000000";
+          document.getElementById("Site").style.backgroundColor = "#FFFFFF";
+
+          var navs = document.getElementsByClassName('navlink');
+            for (var i = 0; i < navs.length; i++)
+              navs[i].style.color = "#000000";
+
+          mode = false;
+        }
+        else
+          {
+            document.getElementById("Site").style.color = "#FFFFFF";
+            document.getElementById("Site").style.backgroundColor = "#18191A";
+
+            var navs = document.getElementsByClassName('navlink');
+              for (var i = 0; i < navs.length; i++)
+                navs[i].style.color = "#FFFFFF";
+            mode = true;
+          }
+    }
+</script>
+</body>
+</html>

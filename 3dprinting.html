@@ -46,7 +46,7 @@
 
 <body id = "Site">
   <ul class = "nav">
-    <li class = "nav"><a class = "navlink" href="index.html">Home</a></li>
+    <li class = "nav"><a class = "navlink" href="home.html">Home</a></li>
     <li class = "nav"><a class = "navlink" href="info_web.html">Lyndon's Bizarre Dreams</a></li>
     <li class = "nav"><a class = "navlink"  onclick="modeToggle()">Dark Mode Toggle</a></li>
   </ul>
@@ -462,9 +462,6 @@ You can use an airbrush to paint the prints, but those cost more than acrylic pa
     "MarbleDarthRevan.jpg", "QueenMask.jpg", "Speaker.jpg", "SpiderManLastStand.jpg", "Tank.jpg",
     "Maul.jpg", "Revan.jpg", "Samson.jpg", "HHG.jpg", "Naoto.jpg", "LithoTrials.jpg", "Explosion.jpg"];
 
-    var mode = true;
-
-
     for (var i = images.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
         var temp = images[i];
@@ -477,23 +474,19 @@ You can use an airbrush to paint the prints, but those cost more than acrylic pa
     document.getElementById("Gallery").src="images/Samples/" + img;
 
     function changePicture(direction) {
-      if (direction == true)
-        i++;
-      else
-        i--;
+      if (direction == true) i++;
+      else i--;
 
-      if (i >= images.length)
-        i = 0;
-      else if (i < 0)
-        i = images.length-1;
+      if (i >= images.length) i = 0;
+      else if (i < 0) i = images.length-1;
 
       var img = images[i];
       document.getElementById("Gallery").src="images/Samples/" + img;
     }
 
+    var mode = true;
     function modeToggle()
     {
-
       if (mode)
         {
           document.getElementById("Site").style.color = "#000000";

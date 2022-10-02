@@ -10,33 +10,37 @@
 
 </head>
 <body class="body">
-    
+
     <div class="side">
+        <p>Link to Home</p>
+        <div class="content-link">
+          <a href="home.html">Home</a>
+        </div>
         <p>Link to Kyler's Hobby:</p>
         <div class="content-link">
-            <a href="3dprinting.html">3d Printing</a>  
+            <a href="3dprinting.html">3d Printing</a>
         </div>
         <p>Quick Navigation of This Webpage:</p>
         <div class="content-link">
-            <a href="#sleep">Sleep</a>  
+            <a href="#sleep">Sleep</a>
         </div>
         <div class="content-link">
-            <a href="#nokia">Nokia</a> 
+            <a href="#nokia">Nokia</a>
         </div>
         <div class="content-link">
-            <a href="#faceless">Faceless</a>  
+            <a href="#faceless">Faceless</a>
         </div>
         <div class="content-link">
             <a href="#slide">Slide</a>
         </div>
         <div class="content-link">
-            <a href="#apple-sauce">Apple Sauce</a> 
+            <a href="#apple-sauce">Apple Sauce</a>
         </div>
         <div class="content-link">
-            <a href="#CVS-parking-lot">CVS Parking Lot</a> 
+            <a href="#CVS-parking-lot">CVS Parking Lot</a>
         </div>
         <div class="content-link">
-            <a href="#college-rejection">College Rejection</a> 
+            <a href="#college-rejection">College Rejection</a>
         </div>
         <div class="content-link">
             <a href="#ASM">ASM</a>
@@ -62,7 +66,7 @@
     </div>
 
     <main class="main">
-        <div class="dream">    
+        <div class="dream">
             <h1>Lyndon's Bizarre Dreams: </h1>
             <div id="sleep" class="div">
                 <p class="caption">Lyndon's favorite hobby is sleeping. When sleeping, he likes to have dreams.
@@ -71,7 +75,7 @@
                 <img class="img-hobby" src="images/lyndon_sleep.png" alt="Image of Lyndon Sleeping">
             </div>
             <hr />
-        
+
             <div id="nokia" class="div">
                 <p class="caption">Lyndon's most hated nightmares are ones where an indestructible being constantly
                                    chases him. No matter what he does to the being chasing him, it never goes down.
@@ -79,7 +83,7 @@
                 <img class="img-hobby" src="images/lyndon_nokia.png" alt="Image of Lyndon Being Chased">
             </div>
             <hr />
-            
+
             <div id="faceless" class="div">
                 <p class="caption">Whenever he meets someone new in his dreams, Lyndon often forget what they look
                                    like after waking up.
@@ -87,7 +91,7 @@
                 <img class="img-hobby" src="images/lyndon_faceless.jpg" alt="Image of Someone Not Memorable">
             </div>
             <hr />
-        
+
             <div id="slide" class="div">
                 <p class="caption">Once in a while, he has a dream where he is sliding down a kiddie-slide and wakes
                                    up immediately after from the adrenaline.
@@ -117,7 +121,7 @@
             <div id="college-rejection" class="div">
                 <p class="caption">During senior year of high school, Lyndon had a nightmare where he got rejected from all
                                    colleges. Strangely, the dream happened around September and October, which was before he
-                                   even applied to any UCs or Cal States. College application normally ends in November. 
+                                   even applied to any UCs or Cal States. College application normally ends in November.
                 </p>
                 <img class="img-hobby" src="images/lyndon_reject.png" alt="Image of Lyndon Being Rejected">
             </div>
@@ -163,7 +167,7 @@
 
             <div id="security-pov" class="div">
                 <p class="caption">When Lyndon was young, he was scaried of those Chinese dancing lions. And so, he one day had a nightmare
-                                   about them. What makes it more scary was the fact that for some reason his eyes saw things through the 
+                                   about them. What makes it more scary was the fact that for some reason his eyes saw things through the
                                    leds of a security camera.
                 </p>
                 <img class="img-hobby" src="images/lyndon_POV.png" alt="Image of Security POV">
@@ -189,18 +193,18 @@
         </div>
 
         <script>
-            let images = ['images/lyndon_scooter0.png', 
+            let images = ['images/lyndon_scooter0.png',
                           'images/lyndon_scooter1.png',
-                          'images/lyndon_scooter2.png', 
+                          'images/lyndon_scooter2.png',
                           'images/lyndon_scooter3.png'];
             let index = 0;
             const imgElement = document.querySelector('#scooter-tripping');
-    
+
             function changeImage() {
                 imgElement.src = images[index];
                 index == images.length-1 ? index = 0 : index++;
             }
-    
+
             window.onload = function () {
                 setInterval(changeImage, 2000);
             };
