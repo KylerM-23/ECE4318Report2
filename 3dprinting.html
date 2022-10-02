@@ -340,7 +340,7 @@ enough experience to identify areas the print will likely fail. Once the model h
 
 <table>
   <tr>
-    <td><img src="images/3DPrinting/ResinPrinter.jpg" alt="Resin Printer" width = "300" height= "300" ></td>
+    <td><img src="images/3DPrinting/ResinPrinter.jpg" alt="Resin Printer" height= "300" ></td>
     <td><img src="images/3DPrinting/FilledVat.jpg" alt="Filed Vat" height= "300"></td>
     <td><img src="images/3DPrinting/ResinResult.jpg" alt="Print Result" height= "300"></td>
   </tr>
@@ -400,6 +400,7 @@ You should filter the resin before pouring it back into the bottle to remove any
 
 <table>
   <tr>
+    <td><img src="images/3DPrinting/CleanupBefore.jpg" alt="Clean Up Before" height = "300" ></td>
     <td><img src="images/3DPrinting/Cleanup.jpg" alt="Vat & Microfiber & Plate" height = "300" ></td>
     <td><img src="images/3DPrinting/EvaporateJar.jpg" alt="Very Sophisticated Resin Water Disposal" height = "300" ></td>
   </tr>
@@ -458,11 +459,20 @@ You can use an airbrush to paint the prints, but those cost more than acrylic pa
     const images = ["Batmobile.png", "ChibiNaoto.jpg", "CLA_Lithophane.jpg", "Deadpool.jpg",
     "Gasmask.jpg", "Headcrab.jpg", "IronmanLithophane.jpg","LauraLithophane.jpg","MandoLithophane.jpg",
     "MitsuruLithophane.jpg", "Psylocke.jpg", "SophiaYoYo.jpg", "TaigaLithophane.jpg", "Drawer.jpg",
-    "MarbleDarthRevan.jpg", "QueenMask.jpg", "Speaker.jpg", "SpiderManLastStand.jpg", "Tank.jpg"];
+    "MarbleDarthRevan.jpg", "QueenMask.jpg", "Speaker.jpg", "SpiderManLastStand.jpg", "Tank.jpg",
+    "Maul.jpg", "Revan.jpg", "Samson.jpg", "HHG.jpg", "Naoto.jpg", "LithoTrials.jpg", "Explosion.jpg"];
 
     var mode = true;
 
-    var i = Math.floor(Math.random()*images.length);
+
+    for (var i = images.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = images[i];
+        images[i] = images[j];
+        images[j] = temp;
+    }
+
+    var i = 0;
     var img = images[i];
     document.getElementById("Gallery").src="images/Samples/" + img;
 
